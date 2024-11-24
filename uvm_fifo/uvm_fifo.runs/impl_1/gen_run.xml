@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xa7a12tcpg238-2I" LaunchTime="1732175714">
+  <File Type="PLACE-PRE-SIMILARITY" Name="sync_fifo_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="sync_fifo.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="sync_fifo.sysdef"/>
+  <File Type="BITSTR-MMI" Name="sync_fifo.mmi"/>
+  <File Type="BITSTR-BMM" Name="sync_fifo_bd.bmm"/>
+  <File Type="BITSTR-NKY" Name="sync_fifo.nky"/>
+  <File Type="BITSTR-RBT" Name="sync_fifo.rbt"/>
+  <File Type="REPORTS-TCL" Name="sync_fifo_reports.tcl"/>
+  <File Type="RCFI_FILE" Name="sync_fifo.rcfi"/>
+  <File Type="OPT-HWDEF" Name="sync_fifo.hwdef"/>
+  <File Type="RBD_FILE" Name="sync_fifo.rbd"/>
+  <File Type="BITSTR-MSK" Name="sync_fifo.msk"/>
+  <File Type="PA-TCL" Name="sync_fifo.tcl"/>
+  <File Type="ROUTE-TIMING-PB" Name="sync_fifo_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PWROPT-DCP" Name="sync_fifo_pwropt.dcp"/>
+  <File Type="RDI-RDI" Name="sync_fifo.vdi"/>
+  <File Type="PHYSOPT-DCP" Name="sync_fifo_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="sync_fifo_postroute_physopted.rqs"/>
+  <File Type="NPI_FILE" Name="sync_fifo.npi"/>
+  <File Type="BG-BIN" Name="sync_fifo.bin"/>
+  <File Type="CFI_FILE" Name="sync_fifo.cfi"/>
+  <File Type="BG-DRC" Name="sync_fifo.drc"/>
+  <File Type="ROUTE-ERROR-DCP" Name="sync_fifo_routed_error.dcp"/>
+  <File Type="RNPI_FILE" Name="sync_fifo.rnpi"/>
+  <File Type="BG-BGN" Name="sync_fifo.bgn"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="sync_fifo_routed_bb.dcp"/>
+  <File Type="PDI-FILE" Name="sync_fifo.pdi"/>
+  <File Type="BG-BIT" Name="sync_fifo.bit"/>
+  <File Type="ROUTE-DCP" Name="sync_fifo_routed.dcp"/>
+  <File Type="OPT-DCP" Name="sync_fifo_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="sync_fifo_placed.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="sync_fifo_postplace_pwropt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="sync_fifo_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="sync_fifo_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-RQS" Name="sync_fifo_routed.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/fifo.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sync_fifo"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/fifo.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>
